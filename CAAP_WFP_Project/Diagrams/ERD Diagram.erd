@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="ERD Diagram.erd">
+	<entities>
+		<data-source id="sqlite_jdbc-193fb0aa467-6eca24790e3786e5">
+			<entity id="1" name="CPs_table" fq-name="CPs_table" order="0" x="347" y="655"/>
+			<entity id="2" name="Date_table" fq-name="Date_table" order="1" x="586" y="405"/>
+			<entity id="3" name="Delivery_table" fq-name="Delivery_table" order="2" x="660" y="31"/>
+			<entity id="4" name="Dispatch_table" fq-name="Dispatch_table" order="3" x="1055" y="221"/>
+			<entity id="5" name="Distribution_table" fq-name="Distribution_table" order="4" x="80" y="328"/>
+			<entity id="6" name="FRN_table" fq-name="FRN_table" order="5" x="317" y="9"/>
+			<entity id="7" name="locations" fq-name="locations" order="6" x="799" y="522"/>
+		</data-source>
+	</entities>
+	<relations>
+		<relation name="vfk_locations_Delivery_table" type="vfk" pk-ref="3" fk-ref="7"/>
+		<relation name="vfk_Date_table_Delivery_table" type="vfk" pk-ref="3" fk-ref="2"/>
+		<relation name="vfk_CPs_table_Delivery_table" type="vfk" pk-ref="3" fk-ref="1"/>
+		<relation name="vfk_locations_Dispatch_table" type="vfk" pk-ref="4" fk-ref="7"/>
+		<relation name="vfk_Date_table_Dispatch_table" type="vfk" pk-ref="4" fk-ref="2"/>
+		<relation name="vfk_CPs_table_Dispatch_table" type="vfk" pk-ref="4" fk-ref="1"/>
+		<relation name="vfk_CPs_table_Distribution_table" type="vfk" pk-ref="5" fk-ref="1"/>
+		<relation name="vfk_locations_Distribution_table" type="vfk" pk-ref="5" fk-ref="7"/>
+		<relation name="vfk_Date_table_Distribution_table" type="vfk" pk-ref="5" fk-ref="2"/>
+		<relation name="vfk_locations_FRN_table" type="vfk" pk-ref="6" fk-ref="7"/>
+		<relation name="vfk_Date_table_FRN_table" type="vfk" pk-ref="6" fk-ref="2"/>
+		<relation name="vfk_CPs_table_FRN_table" type="vfk" pk-ref="6" fk-ref="1"/>
+	</relations>
+</diagram>

@@ -1,0 +1,49 @@
+{
+	"folders": {},
+	"connections": {
+		"sqlite_jdbc-193fb0aa467-6eca24790e3786e5": {
+			"provider": "sqlite",
+			"driver": "sqlite_jdbc",
+			"name": "CAAP_DB",
+			"save-password": true,
+			"show-system-objects": true,
+			"configuration": {
+				"database": "C:\\DBEAVER\\CAAP_DB",
+				"url": "jdbc:sqlite:C:\\DBEAVER\\CAAP_DB",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"auth-model": "native"
+			},
+			"custom-properties": {
+				"dataformat.profile.language": "en",
+				"dataformat.type.date.pattern": "yyyy-MM-DD",
+				"dataformat.type.number.nativeSpecialValues": "false",
+				"resultset.grid.value.format": "UI"
+			}
+		}
+	},
+	"virtual-models": {"sqlite_jdbc-193fb0aa467-6eca24790e3786e5":{":Date_table":{"constraints":{"Date_table_VK":{"type":"vpk","attributes":["Unique Date"]}},"foreign-keys":[{"entity":"node://CAAP_WFP_Project/datasources/sqlite_jdbc-193fb0aa467-6eca24790e3786e5/table/FRN_table","constraint":"FRN_table_VK","attributes":{"Month Number":"Cycle Month"}},{"entity":"node://CAAP_WFP_Project/datasources/sqlite_jdbc-193fb0aa467-6eca24790e3786e5/table/Delivery_table","constraint":"Delivery_table_VK","attributes":{"Unique Date":"Delivery Start Date"}},{"entity":"node://CAAP_WFP_Project/datasources/sqlite_jdbc-193fb0aa467-6eca24790e3786e5/table/Dispatch_table","constraint":"Dispatch_table_VK","attributes":{"Unique Date":"Delivery Start Date"}},{"entity":"node://CAAP_WFP_Project/datasources/sqlite_jdbc-193fb0aa467-6eca24790e3786e5/table/Distribution_table","constraint":"Distribution_table_VK","attributes":{"Unique Date":"Distribution Start Date"}},{"entity":"node://CAAP_WFP_Project/datasources/sqlite_jdbc-193fb0aa467-6eca24790e3786e5/Delivery_table","constraint":"Delivery_table_VK","attributes":{"Unique Date":"Delivery Start Date"}},{"entity":"node://CAAP_WFP_Project/datasources/sqlite_jdbc-193fb0aa467-6eca24790e3786e5/Dispatch_table","constraint":"Dispatch_table_VK","attributes":{"Unique Date":"Delivery Start Date"}},{"entity":"node://CAAP_WFP_Project/datasources/sqlite_jdbc-193fb0aa467-6eca24790e3786e5/FRN_table","constraint":"FRN_table_VK","attributes":{"Month Number":"Cycle Month"}},{"entity":"node://CAAP_WFP_Project/datasources/sqlite_jdbc-193fb0aa467-6eca24790e3786e5/Distribution_table","constraint":"Distribution_table_VK","attributes":{"Unique Date":"Distribution Start Date"}}]},":CPs_table":{"constraints":{"CPs_table_VK":{"type":"vpk","attributes":["CP Name"]}},"foreign-keys":[{"entity":"node://CAAP_WFP_Project/datasources/sqlite_jdbc-193fb0aa467-6eca24790e3786e5/table/Distribution_table","constraint":"Distribution_table_VK","attributes":{"CP Name":"CP Name"}},{"entity":"node://CAAP_WFP_Project/datasources/sqlite_jdbc-193fb0aa467-6eca24790e3786e5/table/Delivery_table","constraint":"Delivery_table_VK","attributes":{"CP Name":"CP Name"}},{"entity":"node://CAAP_WFP_Project/datasources/sqlite_jdbc-193fb0aa467-6eca24790e3786e5/table/FRN_table","constraint":"FRN_table_VK","attributes":{"CP Name":"CP Name"}},{"entity":"node://CAAP_WFP_Project/datasources/sqlite_jdbc-193fb0aa467-6eca24790e3786e5/table/Dispatch_table","constraint":"Dispatch_table_VK","attributes":{"CP Name":"CP Name"}},{"entity":"node://CAAP_WFP_Project/datasources/sqlite_jdbc-193fb0aa467-6eca24790e3786e5/Delivery_table","constraint":"Delivery_table_VK","attributes":{"CP Name":"CP Name"}},{"entity":"node://CAAP_WFP_Project/datasources/sqlite_jdbc-193fb0aa467-6eca24790e3786e5/Dispatch_table","constraint":"Dispatch_table_VK","attributes":{"CP Name":"CP Name"}},{"entity":"node://CAAP_WFP_Project/datasources/sqlite_jdbc-193fb0aa467-6eca24790e3786e5/Distribution_table","constraint":"Distribution_table_VK","attributes":{"CP Name":"CP Name"}}]},":Distribution_table":{"constraints":{"Distribution_table_VK":{"type":"vpk","attributes":["FDP"]}}},":locations":{"foreign-keys":[{"entity":"node://CAAP_WFP_Project/datasources/sqlite_jdbc-193fb0aa467-6eca24790e3786e5/table/Distribution_table","constraint":"Distribution_table_VK","attributes":{"FDP":"FDP"}},{"entity":"node://CAAP_WFP_Project/datasources/sqlite_jdbc-193fb0aa467-6eca24790e3786e5/table/FRN_table","constraint":"FRN_table_VK","attributes":{"FDP":"FDP"}},{"entity":"node://CAAP_WFP_Project/datasources/sqlite_jdbc-193fb0aa467-6eca24790e3786e5/table/Delivery_table","constraint":"Delivery_table_VK","attributes":{"FDP":"FDP"}},{"entity":"node://CAAP_WFP_Project/datasources/sqlite_jdbc-193fb0aa467-6eca24790e3786e5/table/Dispatch_table","constraint":"Dispatch_table_VK","attributes":{"FDP":"FDP"}},{"entity":"node://CAAP_WFP_Project/datasources/sqlite_jdbc-193fb0aa467-6eca24790e3786e5/Distribution_table","constraint":"Distribution_table_VK","attributes":{"FDP":"FDP"}},{"entity":"node://CAAP_WFP_Project/datasources/sqlite_jdbc-193fb0aa467-6eca24790e3786e5/FRN_table","constraint":"FRN_table_VK","attributes":{"FDP":"FDP"}},{"entity":"node://CAAP_WFP_Project/datasources/sqlite_jdbc-193fb0aa467-6eca24790e3786e5/Delivery_table","constraint":"Delivery_table_VK","attributes":{"FDP":"FDP"}},{"entity":"node://CAAP_WFP_Project/datasources/sqlite_jdbc-193fb0aa467-6eca24790e3786e5/Dispatch_table","constraint":"Dispatch_table_VK","attributes":{"FDP":"FDP"}}]},":Delivery_table":{"constraints":{"Delivery_table_VK":{"type":"vpk","attributes":["FDP"]}}},":Dispatch_table":{"constraints":{"Dispatch_table_VK":{"type":"vpk","attributes":["FDP"]}}},":FRN_table":{"constraints":{"FRN_table_VK":{"type":"vpk","attributes":["Cycle Month"]}},"foreign-keys":[{"entity":"node://CAAP_WFP_Project/datasources/sqlite_jdbc-193fb0aa467-6eca24790e3786e5/CPs_table","constraint":"CPs_table_VK","attributes":{"CP Name":"CP Name"}}]}}},
+	"network-profiles": {
+		"mms": {
+			"name": "mms",
+			"handlers": {}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"smart-commit": false,
+			"smart-commit-recover": true,
+			"auto-close-transactions": true,
+			"close-transactions-period": 1800,
+			"auto-close-connections": true,
+			"close-connections-period": 14400
+		}
+	}
+}

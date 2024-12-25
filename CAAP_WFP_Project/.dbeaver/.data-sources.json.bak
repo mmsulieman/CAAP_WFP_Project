@@ -1,0 +1,35 @@
+{
+	"folders": {},
+	"connections": {
+		"sqlite_jdbc-193fb0aa467-6eca24790e3786e5": {
+			"provider": "sqlite",
+			"driver": "sqlite_jdbc",
+			"name": "CAAP_DB",
+			"save-password": true,
+			"configuration": {
+				"database": "C:\\DBEAVER\\CAAP_DB",
+				"url": "jdbc:sqlite:C:\\DBEAVER\\CAAP_DB",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"auth-model": "native"
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"smart-commit": false,
+			"smart-commit-recover": true,
+			"auto-close-transactions": true,
+			"close-transactions-period": 1800,
+			"auto-close-connections": true,
+			"close-connections-period": 14400
+		}
+	}
+}
