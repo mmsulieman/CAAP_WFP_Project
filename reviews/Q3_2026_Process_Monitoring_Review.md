@@ -43,7 +43,7 @@ These are the most important form defects. v2 row numbers are shown.
 | 350 | `HHAsstMode_oth1` ← `selected(${HHAsstMode1},'999')` | `AsstModality1` has only 1/2; there is no Other option. | 0 answers |
 | 1687 | `MOWhWhatComm_oth` ← `selected(...,'999')` | `CommoditiesDM` has no `999`. | 0 answers |
 | 824, 838 | `oth_rowfood`, `othnotgood` ← `selected(${C09.2},'99')` | `C09.2` uses `or other`, so the code is **`other`**. `oth_rowfood` is also a *ration-size* select, not an "other, specify" text field. | 0 answers |
-| 52, 98–100, 182–193, 241, 320–321 | Various CBT questions ← `selected(${HHAsstMode},'5'/'6')` | `AsstModality` only has 1, 2, 999. The `'5'`/`'6'` branches are harmless leftovers, but `MOAsstCBTRed` (row 321) depends **only** on `'6'`, so it can never show. | – |
+| 52, 98–100, 182–193, 241, 320–321 | Various CBT questions ← `selected(${HHAsstMode},'5'/'6')` | `AsstModality` only has 1, 2, 999. The `'5'`/`'6'` branches are harmless leftovers. *Correction:* `MOAsstIKRed`/`MOAsstCBTRed` (rows 320–321) sit in the Observe-distribution module, where `HHAsstMode` is never asked, so both are unreachable. Their missing parentheses also drop the activity filter. Fixed by a new `MOAsstModeObs` question; see [`Q3_2026_skip_logic_fixes.md`](Q3_2026_skip_logic_fixes.md). | 0 answers to rows 320–321 |
 
 **Fix:** correct the literals and re-deploy. Add a CI-style check that compares every `${q}='x'` and `selected(${q},'x')` against `q`'s choice list before each deployment.
 
